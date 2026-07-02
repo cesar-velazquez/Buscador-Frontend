@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memorama</title>
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.10.1/css/mdb.min.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,400i,700,700i" rel="stylesheet">
+
+
+    <!-- Estilos propios -->
+    <link rel="stylesheet" href="../styles/css/index.css">
+    <link rel="stylesheet" href="./memorama.css">
+
+</head>
+<body>
+
+    <main>
+
+        <section>
+            <div class="container py-4 mt-5 mb-5">
+               
+                <p class="instruccion color--verde">*Haz clic sobre las tarjetas y resuelve el memorama encontrando las parejas de adjetivos opuestos.</p>
+
+                <div class="text-center">
+                    <p><b>Ejemplo: </b>Handsome - Ugly</p>
+                </div>
+
+                <section id="memorama" class="actividad espacio-arriba margenes-lados escondible">
+
+                    <section id="contadores" class="color-subtitulo">
+                        <i id="hour">00</i> :
+                        <i id="minute">00</i> :
+                        <i id="second">00</i>
+                    </section>
+
+                    <section id="interiorMemorama1" class="interiorMemorama">
+
+                        <div class='letraLengua color-1' name='a'>
+                            <img src="./img-memorama/modulo8_imagenes/M8_8.54-short.png" alt="">
+                            <img src="./img-memorama/interrogacion.svg" onerror="this.onerror=null; this.src='images/interrogacion.png'">
+                        </div>
+                        <div class='nombreLetraLengua color-1' name='a'>
+                            <img src="./img-memorama/modulo8_imagenes/M8_8.54-tall.png" alt="">
+                            <img src="./img-memorama/interrogacion.svg" onerror="this.onerror=null; this.src='images/interrogacion.png'">
+                        </div>
+
+                        <div class='letraLengua color-1' name='b'>
+                            <img src="./img-memorama/modulo8_imagenes/M8_8.54-pretty.png" alt="">
+                            <img src="./img-memorama/interrogacion.svg" onerror="this.onerror=null; this.src='images/interrogacion.png'">
+                        </div>
+                        <div class='nombreLetraLengua color-1' name='b'>
+                            <img src="./img-memorama/modulo8_imagenes/M8_8.54-uglywoman.png" alt="">
+                            <img src="./img-memorama/interrogacion.svg" onerror="this.onerror=null; this.src='images/interrogacion.png'">
+                        </div>
+
+                        <div class='letraLengua color-1' name='c'>
+                            <img src="./img-memorama/modulo8_imagenes/M8_8.54-fat.png" alt="">
+                            <img src="./img-memorama/interrogacion.svg" onerror="this.onerror=null; this.src='images/interrogacion.png'">
+                        </div>
+                        <div class='nombreLetraLengua color-1' name='c'>
+                            <img src="./img-memorama/modulo8_imagenes/M8_8.54-thin.png" alt="">
+                            <img src="./img-memorama/interrogacion.svg" onerror="this.onerror=null; this.src='images/interrogacion.png'">
+                        </div>
+
+                        <div class='letraLengua color-1' name='d'>
+                            <img src="./img-memorama/modulo8_imagenes/M8_8.54-young.png" alt="">
+                            <img src="./img-memorama/interrogacion.svg" onerror="this.onerror=null; this.src='images/interrogacion.png'">
+                        </div>
+                        <div class='nombreLetraLengua color-1' name='d'>
+                            <img src="./img-memorama/modulo8_imagenes/M8_8.54-old.png" alt="">
+                            <img src="./img-memorama/interrogacion.svg" onerror="this.onerror=null; this.src='images/interrogacion.png'">
+                        </div>
+
+                        <div class='letraLengua color-1' name='e'>
+                            <img src="./img-memorama/modulo8_imagenes/M8_8.54-handsome.png" alt="">
+                            <img src="./img-memorama/interrogacion.svg" onerror="this.onerror=null; this.src='images/interrogacion.png'">
+                        </div>
+                        <div class='nombreLetraLengua color-1' name='e'>
+                            <img src="./img-memorama/modulo8_imagenes/M8_8.54-uglyman.png" alt="">
+                            <img src="./img-memorama/interrogacion.svg" onerror="this.onerror=null; this.src='images/interrogacion.png'">
+                        </div>
+
+                    </section>
+
+                    <div class="text-right">
+                        <button id="reiniciarmemo" style="font-size: 1.3em; background-color: #5656BF; color: white; margin: 1em 0px 0px 10px; width: 200px; display: inline-block; padding: 10px; border-radius: 6px; text-align: center;" class="btnVerde tryag tryblanco btnazul">Try again</button>
+                    </div>
+
+                </section>
+        
+            </div>
+        </section>
+
+    </main>
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.10.1/js/mdb.min.js"></script>
+
+    <script src="./scriptMemorama.js"></script>
+
+</body>
+</html>

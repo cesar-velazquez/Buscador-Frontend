@@ -1,0 +1,146 @@
+p, label, .TexEsc { font-size:1.3rem }
+.opciones select { width:100%; background-color:#fff; border:2px solid #1A529C; color:#000; font-size:1.3125rem; padding:1rem 2rem; border-radius:9px; }
+.opciones select { background-image:url(../images/unit-3/flecha.png); background-repeat:no-repeat; background-position:99% center; -webkit-appearance:none; -moz-appearance:none;
+    -o-appearance:none; appearance:none; background-size:2rem; margin:1rem 0 2rem 0; }
+
+.correcto { border:2px solid #056E31; margin: 1rem 0 2rem 0; border-radius:10px; font-size:1.3rem; padding:1rem 2rem; background-image:none; background-color:#fff; background-repeat:no-repeat; background-position:99% center; background-size:1.8rem; }
+.incorrecto { border:2px solid #8E041C; margin: 1rem 0 2rem 0; border-radius:10px; font-size:1.3rem; padding:1rem 2rem; background-image:none; background-color:#fff; background-repeat:no-repeat; background-position:99% center; background-size:1.8rem; }
+.invisible{ display:none !important; }
+
+select.correcto { border:2px solid #056E31; background-image:none; background-color:#fff; background-repeat:no-repeat; background-position:99% center; background-size:1.8rem; }
+select.incorrecto { border:2px solid #8E041C; background-image:none; background-color:#fff; background-repeat:no-repeat; background-position:99% center; background-size:1.8rem; }
+.form-control:disabled { background-color:#fff; opacity:1; }
+.fa-check { color:#39B54A; }
+.result { position:absolute; right:1.5rem; top:calc(50% - 13px); width:16px; height:16px; font-size:1.5rem; }
+.fa-check:before { content:"\f00c"; }
+.fa-xmark { color:#FF0000; }
+
+.escribir331{ font-size:1.3rem; }
+input{ background-color:#E7EFF8; border:none; margin-left:0.5rem; margin-right:0.5rem; text-align:center; color:#000; position:relative; }
+.ecorrecto { padding:0.1rem 5rem 0.1rem 3rem; margin:0 0.5rem; border:2px solid #39B54A; background-image:none; background-repeat:no-repeat; background-position:99% center; background-size:1.8rem; }
+.eincorrecto { padding:0.0rem 5rem 0.1rem 3rem; margin:0 0.5rem; border:2px solid #FF0000; background-image:none; background-repeat:no-repeat; background-position:99% center; background-size:1.8rem; }
+.contselopce{ position:relative; /*display:inline;*/ display:inline-grid; width:94%; }
+
+.btn-normal{ margin:2rem 0 !important; }
+
+.recuadro-borde-azul { border: 2px solid #1D549D; border-radius: 1em; padding: 2em; }
+
+.grid-columnas4 { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; text-align: center; }
+.tit1-grid-columnas4{ color:#000; padding:0.5rem 0; }
+.tit2-grid-columnas4{ color:#000; padding:0.5rem 0; }
+.cont-grid-columnas4{ background-color:#fff; color:#000; padding:0.5rem 0; }
+.tit1-grid-columnas4 p, .tit2-grid-columnas4 p, .cont-grid-columnas4 p{ margin:0; padding:0; }
+.escribir-12-1 .btn-descarga { min-height: 1rem; }
+.retroalimentacion1{ font-size:1.3rem; text-align:center; font-weight:bolder; margin:2rem 0 1rem 0; min-height:2.1rem; }
+.rojoretro{ color:#000; }
+.verderetro{ color:#39B54A; }
+.img-apoyo{ width:75%; }
+
+.escribir-12-1{ background-color:#fff; padding:0 1rem; margin-top:3rem; }
+.escribir-12-1 input, .escribir-12-2 input, .escribir-12-4 input{ font-size:1.3rem; background-color:#fff; border:1px solid #2E356C; margin-left:0.5rem; margin-right:0.5rem; text-align:center; color:#000; position:relative; border-radius:5px; }
+.borde-der{ border-right:2px solid #A42232; margin-bottom: 1rem; margin-top: 1rem; }
+.sin-borde-der{ margin-bottom: 1rem; margin-top: 1rem; }
+.border-bot{ border-bottom:2px #A42232 solid; }
+.contenedor-botones{ padding: 0 3.2rem 2rem 0; }
+.text-ejemplo { background-color: #fff; border: 1px solid #2E356C; margin-left: 0.5rem; margin-right: 0.5rem; text-align: center; color: #000; position: relative; border-radius: 5px; font-size:1.3rem; }
+.text-left{ text-align:left; }
+.border-top-vin{ border-top:2px #A42232 solid; }
+.rojoretro{
+    color: #FF0000;
+}
+
+/*Seleccionar*/
+.seleccionar-12-1 .btn-descarga, .seleccionar-12-2 .btn-descarga { min-height: 1rem; }
+.seleccionar-12-1, .seleccionar-12-2{ background-color:#fff; padding:0 1rem; margin-top:3rem; }
+.grid-columnas3 { display: grid; grid-template-columns: 1fr 1fr 1fr; text-align: center; }
+.TexSel{ font-size:1.3rem; }
+.contenedor-botones2 { padding: 0 5.9rem 2rem 0; }
+.selescts select{ background:#E7EFF8; min-width:10em; border:none; padding:0 1em; background-image:url(../images/unit-1/flecha.png); background-repeat:no-repeat; background-position:97% center; width:92%; background-size:16px; text-align:center; font-size:1.3rem; border:1px solid #2E356C; margin-left:4%; margin-right:4%; }
+.cuadro-gris { margin-top: 3rem; position: relative; background: #F7F6F6; padding: 2em; -webkit-box-shadow: 1px 1px 5px 0px rgba(196,186,196,1); -moz-box-shadow: 1px 1px 5px 0px rgba(196,186,196,1); box-shadow: 1px 1px 5px 0px rgba(196,186,196,1); }
+
+.escribir-12-2{ margin-top:3rem; }
+.escribir-12-2 input{ width:7rem; }
+.escribir-12-2 .contselopce { width:75%; }
+
+.escribir-12-2 .ecorrecto, .escribir-12-2 .eincorrecto { padding: 0rem 0rem 0rem 1rem; }
+.escribir-12-2 .TexEsc { width: 4rem; text-align: left; }
+.escribir-12-2 .result { right: 0rem; width: 0px; }
+.examples-mov{ display:none; }
+.lista-mov{ margin-top:2rem; }
+.mt-2rem{ margin-top:2rem; }
+.cua-fon-azu{  background-color:#E7EFF8; margin:0 1rem 1rem 1rem; color:#28326F; }
+
+.escribir-12-2 .borde-der { margin-bottom: 0.2rem; margin-top: 0.3rem; }
+.escribir-12-2 .cont-grid-columnas4 { padding: 0.1rem 0; }
+.escribir-12-2 .sin-borde-der { margin-bottom: 0.2rem; margin-top: 0.3rem; }
+.escribir-12-2 .contenedor-botones4 { padding: 1rem 0; }
+.escribir-12-2 .contenedor-botones2 { padding: 2rem 6rem 1rem 0; }
+.escribir-12-2 .contenedor-botones3 { padding: 1rem 6rem 2rem 0; }
+.escribir-12-2 .retroalimentacion1{ margin:2rem 0 1rem; }
+.grid-columnas2 { display:grid; grid-template-columns: 1fr 1fr; text-align:left; }
+.cuadroazul{ background-color:#E8EEF7; padding:1rem 0 1rem 1rem; display:none; font-size:1.1rem; }
+.escribir-12-2 .btn-descarga { min-height: 1rem; }
+
+.cuadro-rosa { position: relative; margin: 1em 0; background: #E9CDFC; padding: 2rem; -webkit-box-shadow: 1px 1px 5px 0px rgba(196,186,196,1); -moz-box-shadow: 1px 1px 5px 0px rgba(196,186,196,1); box-shadow: 1px 1px 5px 0px rgba(196,186,196,1); }
+.cuadro-rosa:before { content:" "; display:block; background:#A42232; height:0.3em; width:2em; left:2em; position:absolute; top:0; }
+.titulo-cuadro-rosa { background:url(../images/unit-1/a-little-of-fun.png) no-repeat 0 0 /37px; font-weight:bold; color:#28326F; padding:0.3em 0 0 2.3em; min-height:2em; font-size:1.3em; margin-top:0.5em; }
+.img-little{ width:30%; }
+
+.azulfondo{ background-color: #E7EFF7; padding:1rem 2rem !important; }
+.rosafondo{ background-color: #F5E8E9; padding:1rem 2rem !important; }
+.escribir-12-2 input{  height: 100%; width:75% }
+.escribir-12-2 .grid-columnas3{ margin:0.5rem 0;  }
+.escribir-12-2 .grid-columnas3 { display: grid; grid-template-columns: 40% 13% 47%; text-align:left; }
+.escribir-12-2 .bg-grey-columna { background-color: #F2F2F1; }
+.escribir-12-2 .colu1 { margin-right:-0.4rem; text-align:center; padding:1rem 0; }
+.escribir-12-2 .colu2 { margin-left:2rem; text-align:center; padding:1rem 0; }
+.escribir-12-2 .bg-grey-columna p{ margin-bottom:0; }
+.escribir-12-2 .TexEsc { width: 100%; text-align: left; align-items: center; height: 3.9rem; display: flex; border-radius:5px; }
+.escribir-12-2 .result { right: 2rem; width: 0px; }
+.escribir-12-2 .ecorrecto, .escribir-12-2 .eincorrecto { padding: 0rem 0rem 0rem 2.5rem; }
+.btn-descarga { display: inline-flex; background:#2E356C; color:#fff; border:0.125rem solid #2E356C; margin:0 0 0 0.5em; padding:0.3em 0; font-size:1.3rem !important; width:15rem; justify-content:center; }
+.btn-descarga:hover { background:#fff; color:#2E356C; border:0.125rem solid #2E356C; }
+.btn-descarga:disabled { background:#666D84 !important; border:2px solid #666D84; color:#fff; opacity:.5; }
+
+@media screen and (max-width: 1199px) {
+    .escribir-12-2 .result{ right:1.5rem }
+}
+
+@media screen and (max-width: 991px) {
+    .escribir-12-2 .ecorrecto, .escribir-12-2 .eincorrecto { padding: 0rem 0rem 0rem 1.5rem; }
+    .escribir-12-2 .result { right: 1rem; }
+}
+
+@media screen and (max-width: 768px) {
+    .escribir-12-2 .ecorrecto, .escribir-12-2 .eincorrecto { padding: 0rem 0rem 0rem 1rem; }
+    .escribir-12-2 .result { right: 1.5rem; }
+    .escribir-12-2 .colu2 { margin-left: 1.3rem; }
+}
+
+@media screen and (max-width: 767px) {
+    .cuadroazul {
+    display: grid;
+    margin-bottom: 1rem;
+    }
+    p, label, .TexEsc, .btn-descarga { font-size:1.125rem !important; }
+
+    .escritorio{ display:none !important; }
+    .escribir-12-2 .grid-columnas3 { display: grid; grid-template-columns: 62% 37% 0%; }
+    .escribir-12-2 input { width: 94%; }
+    .escribir-12-2 .contselopce{ width:94%; }
+    .escribir-12-2 .ecorrecto, .escribir-12-2 .eincorrecto { padding: 0rem 0rem 0rem 2rem; }
+    .vacia { display: none; }
+    .escribir-12-2 .retroalimentacion1 { margin: 1rem 0 0rem; }
+    .btn-descarga{ width:13rem; }
+
+    .escribir-12-2 { margin-top: 1rem; }
+    .escribir-12-2 .btn-descarga{ margin-bottom:1rem; }
+}
+
+.instrucciones {
+    color: #007C32;
+}
+
+.text-right{ text-align:right; }
+
+.retroalimentacion1 p{ margin-bottom:0; }

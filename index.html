@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <!--  -->
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- BoxIcons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <!-- Icon -->
+    <link rel="icon" type="image/png" href="./img/icon.png">
+
+    <title>Inicio Sesión</title>
+</head>
+
+<body class="max-w-[1116px] m-auto">
+
+    <header
+        class="border-2 border-gray-500/30 py-4 max-sm:px-4 px-8 fixed right-0 left-0 z-10 bg-white flex justify-between items-center min-h-[80px]">
+        <div class="logo">
+            <a class="font-bold text-3xl" href="#">[Mi Sitio Web]</a>
+        </div>
+
+        <nav class="">
+            <ul class="sm:flex gap-4 justify-center items-center hidden  ">                
+                <li><a class="font-bold text-xl" href="#">Inicio</a></li>
+                <li><a class="font-bold text-xl" href="#">Servicios</a></li>
+                <li><a class="font-bold text-xl" href="#">Contacto</a></li>
+            </ul>
+
+            <div class="max-sm:block hidden">
+                <button id="menu" class="text-3xl  ">
+                    <i class='bx bx-menu'></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Menu -->
+    <div id="containerMenu" class="bg-white shadow-xl shadow-red-950/70 border-red-800 w-[60%] min-h-screen fixed z-10 right-0 top-[80px] 
+    transition-all duration-500 transform p-4 translate-x-20 opacity-0 invisible max-sm:block hidden
+    ">
+        <ul class="flex flex-col gap-4">
+            <li><a class="font-bold text-xl" href="#">Inicio</a></li>
+            <li><a class="font-bold text-xl" href="#">Servicios</a></li>
+            <li><a class="font-bold text-xl" href="#">Contacto</a></li>
+        </ul>
+    </div>
+
+    <!-- <h1 class="font-bold text-4xl text-center ">Login</h1> -->
+    <main class="flex margin-auto justify-center items-center min-h-screen ">
+
+        <form action=""
+            class="darkForm mb-10 p-8 max-md:p-4 bg-white rounded-lg flex flex-col gap-4 justify-center items-center relative w-[400px] relative ">
+            <h1 class="text-center font-bold m-auto text-3xl  ">Iniciar sesión</h1>
+            <div id="errorLogin" class="bg-red-100 flex gap-4 items-center justify-center px-4 py-2 border-2 border-red-800 rounded-lg 
+            absolute top-16 max-md:top-12
+            transition-all duration-500 transform translate-y-20 opacity-0 invisible  ">
+                <p class="text-sm  text-red-950  ">Usuario y/o contraseña incorrectos</p>
+                <!-- <button id="removeLogin" class="text-red-950">x</button> -->
+            </div>
+
+            <div class="flex flex-col w-[100%] gap-1 ">
+                <label class="darkLabel font-bold text-black text-xl " for="">Usuario</label>
+                <div class="relative ">
+                    <img class="w-[18px] absolute left-2 top-1/2 -translate-y-1/2 " src="./img/userSolidB.png"
+                        alt="User Icon">
+                    <input class="rounded-lg pIcons border-2 border-black/50 w-full
+                    focus:shadow-lg  focus:shadow-blue-500/20 focus:border-blue-700 focus:outline-none
+                    " type="text" name="user" id="user" placeholder="Escribe tu correo...">
+                </div>
+            </div>
+            <div class="flex flex-col w-[100%] gap-1 ">
+                <label class="darkLabel font-bold text-black text-xl " for="">Contraseña</label>
+
+                <div class="relative bg-red-100">
+                    <button tabindex="-1" id="btnPassword"
+                        class="cursor-pointer absolute left-2 top-1/2 -translate-y-1/2 ">
+                        <img id="eyeClosed" class="w-[18px] " src="./img/eyeClosed.png" alt="Password Icon">
+                        <img id="eyeOpen" class="w-[18px] hidden " src="./img/eyeOpen.png" alt="Password Icon">
+                    </button>
+                    <input id="password" class="rounded-lg pIcons border-2 border-black/50 w-full
+                        focus:shadow-lg  focus:shadow-blue-500/20 focus:border-blue-700 focus:outline-none"
+                        type="password" placeholder="Escribe tu contraseña..." autocomplete="off">
+                </div>
+            </div>
+
+            <div class="w-full ">
+                <p class="text-sm text-right "><a class="text-gray-700" href="#">¿Olvidaste tu contraseña?</a></p>
+            </div>
+
+            <input id="signIn" class="bg-red-800 text-white rounded-lg font-bold w-full py-3 border-2 border-red-800 
+            hover:bg-white hover:text-red-800 hover:cursor-pointer 
+                transition duration-300" type="submit" value="Entrar">
+
+
+        </form>
+    </main>
+
+    <!-- </main> -->
+
+</body>
+
+<script src="./js/main.js"></script>
+<script src="./js/showMenu.js"></script>
+
+</html>

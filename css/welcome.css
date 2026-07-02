@@ -1,0 +1,99 @@
+/******Diseño de tarjeta*********/
+.notInfo {
+    display: flex;
+    justify-content: center;
+}
+
+.non-information {
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    min-height: 300px;
+    padding: 2rem;
+    border-radius: .5rem;
+    font-size: 20px;
+    text-align: center;
+}
+
+.structureInfo {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+}
+
+.design-tarjet {
+    background-color: white;
+    padding: 1rem;
+    border-radius: .5rem;
+    min-height: 300px;
+    position: relative;
+}
+
+.title-tarjet {
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.contenedor-enlaces {
+    display: flex;
+    justify-content: end;
+    gap: 1rem;
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+}
+
+.openResource {
+    background-color: #3B82F6;
+    color: white;
+    border-radius: .5rem;
+    font-weight: bold;
+    padding: .5rem 1rem;
+    border: 2px solid #3B82F6;
+    cursor: pointer;    
+}
+
+.downloadResource {
+    background-color: #3B82F6;
+    color: white;
+    border-radius: .5rem;    
+    padding: .5rem 1rem;
+    border: 2px solid #3B82F6;
+    cursor: pointer;
+}
+
+.openResource:hover {
+    background-color: #991B1B;
+    color: #FFFFFF;
+    transition: 0.5s;
+    border: 2px solid #991B1B;
+}
+
+.downloadResource:hover {
+    background-color: #991B1B;
+    transition: 0.5s;
+    border: 2px solid #991B1B;
+}
+
+@media screen and (max-width: 991px) {
+    .structureInfo {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .openResource {
+        width: auto;
+        margin: auto;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .structureInfo {
+        grid-template-columns: 1fr;
+    }
+
+    .design-tarjet {
+        width: 100%;
+    }
+}

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memorama</title>
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.10.1/css/mdb.min.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,400i,700,700i" rel="stylesheet">
+
+
+    <!-- Estilos propios -->
+    <link rel="stylesheet" href="../styles/css/index.css">
+    <link rel="stylesheet" href="./memorama.css">
+
+</head>
+<body>
+
+    <main>
+        
+            <div class="container py-4 mt-5 mb-5">
+
+                <h1 class="parrafo titulo-azul">Memorama</h1>
+
+                <p class="parrafo instrucciones"><b>Instrucción:</b> Haz clic sobre las tarjetas y relaciona las parejas encontrando los adjetivos opuestos.</p>
+               
+                <div class="text-center">
+                    <p><b>Ejemplo: </b> <i lang="en">Short - Tall</i></p>
+                </div>
+
+                <p id="texto-apoyo" class="sr-only">Total de tarjetas en la actividad: 10</p>
+
+                <div id="memorama" class="actividad espacio-arriba margenes-lados escondible">
+
+                    <div id="respuestas-correctas" class="sr-only" aria-hidden="true">
+                        <p>Respuestas correctas</p>
+                        <div>
+                            
+                        </div>
+                    </div>
+
+                    <div id="interiorMemorama1" class="interiorMemorama">
+
+                        <button class='letraLengua color-1' data-name='a' type="button" name="seleccionable">
+                            <img src="./img-memorama/modulo8_imagenes/M8_8.54-short.png" alt="imagen de apoyo" aria-hidden="true" />
+                            <span class="sr-only"><i lang="en">Short</i>, Persona considerada socialmente con poca estatura</span>
+                        </button>
+                        <button class='nombreLetraLengua color-1' data-name='a' type="button" name="seleccionable">
+                            <img src="./img-memorama/modulo8_imagenes/M8_8.54-tall.png"  alt="imagen de apoyo" aria-hidden="true" />
+                            <span class="sr-only"><i lang="en">Tall</i>, Persona considerada socialmente con mucha estatura</span>
+                        </button>
+
+                        <button class='letraLengua color-1' data-name='b' type="button" name="seleccionable">
+                            <img src="./img-memorama/modulo8_imagenes/M8_8.54-pretty.png"  alt="imagen de apoyo" aria-hidden="true" />
+                            <span class="sr-only"><i lang="en">Pretty</i>, Persona del sexo femenino, considerada socialmente como atractiva</span>
+                        </button>
+                        <button class='nombreLetraLengua color-1' data-name='b' type="button" name="seleccionable">
+                            <img src="./img-memorama/modulo8_imagenes/M8_8.54-uglywoman.png"  alt="imagen de apoyo" aria-hidden="true" />
+                            <span class="sr-only"><i lang="en">Uglywoman</i>, Persona del sexo femenino, considerada socialmente como  poco atractiva</span>
+                        </button>
+
+                        <button class='letraLengua color-1' data-name='c' type="button" name="seleccionable">
+                            <img src="./img-memorama/modulo8_imagenes/M8_8.54-fat.png"  alt="imagen de apoyo" aria-hidden="true" />
+                            <span class="sr-only"><i lang="en">Fat</i>, Persona considerada socialmente con sobrepeso</span>
+                        </button>
+                        <button class='nombreLetraLengua color-1' data-name='c' type="button" name="seleccionable">
+                            <img src="./img-memorama/modulo8_imagenes/M8_8.54-thin.png"  alt="imagen de apoyo" aria-hidden="true" />
+                            <span class="sr-only"><i lang="en">Thin</i>, Persona considerada socialmente con poco peso</span>
+                        </button>
+
+                        <button class='letraLengua color-1' data-name='d' type="button" name="seleccionable">
+                            <img src="./img-memorama/modulo8_imagenes/M8_8.54-young.png"  alt="imagen de apoyo" aria-hidden="true" />
+                            <span class="sr-only"><i lang="en">Young</i>, Persona considerada socialmente como menor de edad</span>
+                        </button>
+                        <button class='nombreLetraLengua color-1' data-name='d' type="button" name="seleccionable">
+                            <img src="./img-memorama/modulo8_imagenes/M8_8.54-old.png"  alt="imagen de apoyo" aria-hidden="true" />
+                            <span class="sr-only"><i lang="en">Old</i>, Persona considerada socialmente como adulto mayor</span>
+                        </button>
+
+                        <button class='letraLengua color-1' data-name='e' type="button" name="seleccionable">
+                            <img src="./img-memorama/modulo8_imagenes/M8_8.54-handsome.png"  alt="imagen de apoyo" aria-hidden="true" />
+                            <span class="sr-only"><i lang="en">Handsome</i>, Persona del sexo masculino, considerada socialmente como atractiva</span>
+                        </button>
+                        <button class='nombreLetraLengua color-1' data-name='e' type="button" name="seleccionable">
+                            <img src="./img-memorama/modulo8_imagenes/M8_8.54-uglyman.png"  alt="imagen de apoyo" aria-hidden="true" />
+                            <span class="sr-only"><i lang="en">Uglyman</i>, Persona del sexo masculino, considerado socialmente como poco atractivo</span>
+                        </button>
+
+                    </div>
+                    <!---->
+
+                    <p class="retroalimentacion" aria-hidden="true">Muy bien. <span class="sr-only"> deberás subir para escuchar las respuestas correctas</span></p>
+
+                    <div class="text-right">
+                        <button id="reiniciarmemo" class="control" disabled>Intentar de nuevo</button>
+                    </div>
+
+                </div>
+        
+            </div>
+
+    </main>
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.10.1/js/mdb.min.js"></script>
+
+    <script src="./scriptMemorama.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,50 @@
+[
+    {
+        "id": "recurso-01",
+        "titulo": "Relacionar columnas",
+        "descripcion": "Esta actividad permite relacionar frases o expresiones atendiendo a un criterio.",
+        "tags": [
+            "pensamiento crítico",
+            "relacionar",
+            "utilidad"
+        ],
+        "siteweb": "./recursos/relacionar/relacionar.html",
+        "download": "./zipRecursos/relacionar.zip"
+    },
+    {
+        "id": "recurso-02",
+        "titulo": "Verdadero-falso",
+        "descripcion": "Esta actividad permite validar una afirmación de acuerdo a criterios establecidos.",
+        "tags": [
+            "pensamiento crítico",
+            "relacionar",
+            "utilidad"
+        ],
+        "siteweb": "./recursos/verdadero-falso/verdadero-falso.html",
+        "download": "./zipRecursos/verdadero-falso.zip"
+    },
+    {
+        "id": "recurso-03",
+        "titulo": "Memorama",
+        "descripcion": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae necessitatibus in.",
+        "tags": [
+            "pensamiento crítico",
+            "relacionar",
+            "utilidad"
+        ],
+        "siteweb": "./recursos/1-memorama/memorama.html",
+        "download": "./zipRecursos/memorama.zip"
+    },
+    {
+        "id": "recurso-04",
+        "titulo": "Selección única",
+        "descripcion": "Esta actividad permite seleccionar una respuesta correcta para cada pregunta.",
+        "tags": [
+            "pensamiento crítico",
+            "relacionar",
+            "utilidad"
+        ],
+        "siteweb": "./recursos/seleccion-unica-version2/seleccion.html",
+        "download": "./zipRecursos/seleccion-unica.zip"
+    }
+]

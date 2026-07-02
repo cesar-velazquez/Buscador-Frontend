@@ -1,0 +1,39 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-variation-settings: "wdth" 100;
+}
+
+p {
+    font-size: 1.25rem;
+}
+
+body {
+    background: #1A202C;
+    background: linear-gradient(180deg, rgba(26, 32, 44, 1) 24%, rgba(0, 59, 117, 1) 99%);
+    color: rgb(0, 0, 0);
+}
+
+::placeholder {
+    color: rgb(0, 0, 0) !important;
+    font-size: 1.25rem;
+}
+
+input {
+    color: black;
+}
+
+.userIcon {
+    background: url('../img/userSolidB.png') .3rem no-repeat;
+}
+
+.passwordIcon {
+    background: url(../img/vision.png) .3rem no-repeat;
+}
+
+.pIcons {
+    padding: .5rem 1rem .5rem 2rem;
+}

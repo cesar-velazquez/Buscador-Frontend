@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/welcome.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- BoxIcons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <!-- Icon -->
+    <link rel="icon" type="image/png" href="./img/icon.png">
+
+    <title>Bienvenido</title>
+</head>
+
+
+<body>
+    <header class="border-2 border-gray-500/30 py-4 max-sm:px-4 px-8 fixed right-0 left-0 z-10 bg-white
+flex justify-between items-center min-h-[80px]">
+        <div class="logo">
+            <a class="font-bold text-3xl" href="#">[Mi Sitio Web]</a>
+        </div>
+
+
+        <nav>
+            <ul class="sm:flex gap-4 justify-center items-center hidden">
+                <li><a class="font-bold text-xl" href="#">Inicio</a></li>
+                <li><a class="font-bold text-xl" href="#">Servicios</a></li>
+                <li><a class="font-bold text-xl" href="#">Contacto</a></li>
+                <li><button
+                        class="btnLogOut text-xl bg-red-800 px-4 py-2 rounded-2xl text-white font-bold hover:bg-red-600 transition color duration-300 ">Cerrar
+                        sesión</button>
+                </li>
+            </ul>
+
+            <div class="max-sm:block hidden">
+                <button id="menu" class="text-3xl  ">
+                    <i class='bx bx-menu'></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Menu -->
+    <div id="containerMenu" class="bg-white shadow-xl shadow-red-950/70 border-red-800 w-[60%] min-h-screen fixed z-10 right-0 top-[80px] 
+    transition-all duration-500 transform p-4 translate-x-20 opacity-0 invisible max-sm:block hidden
+    ">
+        <ul class="flex flex-col gap-4">
+            <li><a class="font-bold text-xl" href="#">Inicio</a></li>
+            <li><a class="font-bold text-xl" href="#">Servicios</a></li>
+            <li><a class="font-bold text-xl" href="#">Contacto</a></li>
+            <li><button
+                    class="btnLogOut text-xl bg-red-800 px-4 py-2 rounded-2xl text-white font-bold hover:bg-red-600 transition color duration-300  ">Cerrar
+                    sesión</button>
+            </li>
+        </ul>
+    </div>
+
+    <div
+        class="max-w-[1116px]  flex justify-center m-auto items-center flex-col rounded-lg p-4 gap-8 md:p-8 max-md:gap-4">
+        <div class="pt-[6rem] w-full">
+            <h1 class="text-3xl text-white font-bold text-left " id="nameUser"></h1>
+        </div>
+
+        <form action="" id="mysearch" class="bg-white rounded-lg flex justify-between w-full">
+            <div class="w-[100%] relative py-3 ">
+                <!-- <i class='py-3 pl-2 text-2xl bx bx-search-alt-2 '></i> -->
+                <div class="pl-1 pr-2 ">
+                    <img class="absolute top-1/2 -translate-y-1/2" src="./img/search.png" alt="Icon search">
+                </div>
+                <input class="w-[100%] px-4 pl-8 pr-4 max-md:pr-1 outline-none mx-0 text-xl " type="search" name=""
+                    id="inputSearch" placeholder="Buscar recurso...">
+            </div>
+            <input type="submit" class="bg-blue-500  text-xl text-white rounded-r-lg px-4 mx-0  " id="searchButton"
+                value="Buscar">
+        </form>
+
+        <p class="text-xl bg-white p-4  rounded-xl ">Los recursos web son componentes (html, css y javascript)
+            que
+            permiten presentar los
+            contenidos de forma dinámica, es decir, brindan la posibilidad al usuario de interactuar con la
+            información
+            presentada. Estos contenedor-elementos se integran a las plantillas con contenidos educativos diversos.
+        </p>
+
+        <div>
+            <h2 id="titulo">Cargando...</h2>
+            <div class="" id="contenedor-elementos"></div>
+            <!-- <div class="" id="notInformation"></div> -->
+        </div>
+        <!-- </div> -->
+    </div>
+</body>
+
+<script src="./js/showMenu.js"></script>
+<script src="./js/recursos.js"></script>
+<script src="./js/session.js"></script>
+
+</html>

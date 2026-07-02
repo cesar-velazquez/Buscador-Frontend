@@ -1,0 +1,77 @@
+p { font-size: 1.3rem; }
+
+.interiorMemorama {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 2rem 0 1rem;
+}
+
+.interiorMemorama .color-1 img:first-child{
+    display: none !important;
+    color: #8E8E8E;
+}
+.interiorMemorama img {
+    width: 150px;
+    height: 150px;
+}
+
+.letraLengua, .nombreLetraLengua {
+    background: url("img-memorama/interrogacion.svg") no-repeat center /60px #F7D589;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1rem;
+    margin: .5rem;
+    border: none;
+}
+
+.letraLengua:focus, .letraLengua:focus-visible, .nombreLetraLengua:focus, .nombreLetraLengua:focus-visible{ outline:none; }
+
+.abierta img:first-child{ display: block !important; }
+.abierta{ border: 2px solid #5656BF; background: #fff; }
+
+.matched {
+    /*background: #F3FFDC !important;*/
+    position: relative;
+}
+.fa-solid{ 
+    position: absolute;
+    font-size: 2.5rem;
+    top: 0.5rem;
+    right: 0.5rem;
+    color:#007C32;
+}
+
+.control { display: inline-flex; background:#2E356C; color:#fff; border:0.125rem solid #2E356C; margin:0 0 0 0.5em; padding:0.3em 0; font-size:1.3rem; width:15rem; justify-content:center; font-weight:bold; border-radius:.2rem }
+.control:hover, .control:focus-visible, .control:focus { background:#fff; color:#2E356C; border:0.125rem solid #2E356C; outline:none; }
+.control:disabled { background:#CCD3DB !important; border:2px solid #CCD3DB; color:#626262; }
+.instrucciones {
+    color: #007C32;
+}
+
+.retroalimentacion{ color:#007C32; text-align:center; font-weight:bold; margin-bottom:2rem; visibility:hidden; }
+
+@media screen and (max-width: 767px) {
+    p { font-size: 1.125rem; }
+    .control{ font-size:1.125rem; }
+
+    .letraLengua, .nombreLetraLengua {
+        background-size: 40px;
+        width: 134px;
+        height: 134px;
+        margin: .3rem;
+    }
+    .interiorMemorama img {
+        width: 125px;
+        height: 125px;
+    }
+    .interiorMemorama{ margin-top:1rem; }
+    .retroalimentacion{ margin-bottom:1rem; }
+}
