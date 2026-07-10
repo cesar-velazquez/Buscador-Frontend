@@ -11,7 +11,12 @@
         rel="stylesheet">
     <!--  -->
     <link rel="stylesheet" href="css/styles.css">
+
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- SweetAlert2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <!-- BoxIcons -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
@@ -31,7 +36,7 @@
         </div>
 
         <nav class="">
-            <ul class="sm:flex gap-4 justify-center items-center hidden  ">                
+            <ul class="sm:flex gap-4 justify-center items-center hidden  ">
                 <li><a class="font-bold text-xl" href="#">Inicio</a></li>
                 <li><a class="font-bold text-xl" href="#">Servicios</a></li>
                 <li><a class="font-bold text-xl" href="#">Contacto</a></li>
@@ -66,6 +71,12 @@
             absolute top-16 max-md:top-12
             transition-all duration-500 transform translate-y-20 opacity-0 invisible  ">
                 <p class="text-sm  text-red-950  ">Usuario y/o contraseña incorrectos</p>
+                <!-- <button id="removeLogin" class="text-red-950">x</button> -->
+            </div>
+            <div id="incompleteInfo" class="bg-red-100 flex gap-4 items-center justify-center px-4 py-2 border-2 border-red-800 rounded-lg 
+            absolute top-16 max-md:top-12
+            transition-all duration-500 transform translate-y-20 opacity-0 invisible  ">
+                <p class="text-sm  text-red-950  ">Ingresa tu usuario y contraseña</p>
                 <!-- <button id="removeLogin" class="text-red-950">x</button> -->
             </div>
 
@@ -112,5 +123,6 @@
 
 <script src="./js/main.js"></script>
 <script src="./js/showMenu.js"></script>
+
 
 </html>

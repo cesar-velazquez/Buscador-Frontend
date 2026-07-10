@@ -1,18 +1,5 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-// Función Login Falso 
-const users = [
-    {
-        username: 'admin@gmail.com',
-        password: 'Admin2#$'
-    },
-    {
-        username: 'cesar',
-        password: 'Cesar2#$'
-    },
-    
-];
-// 
 
 let userInput = document.getElementById('user');
 let passInput = document.getElementById('password');
@@ -20,6 +7,7 @@ let btnLogin = document.getElementById('signIn');
 let showError = document.getElementById("errorLogin");
 let hiddenError = document.getElementById("removeLogin");
 const btnPassword = document.getElementById('btnPassword');
+let incompleteInfo = document.getElementById('incompleteInfo');
 
 const eyeClosed = document.getElementById('eyeClosed');
 const eyeOpen = document.getElementById('eyeOpen');
@@ -38,22 +26,52 @@ function showPass() {
 
 btnPassword.addEventListener('click', (e) => {
     e.preventDefault();
-    showPass()
-    // passInput.setAttribute('type', 'text');
-
+    showPass()    
 });
-
 
 btnLogin.addEventListener('click', validateAccount);
 
-function validateAccount(event) {
+async function validateAccount(event) {
+    // console.log('Validando cuenta...');
+    
     event.preventDefault();
-    const foundUser = users.find(user => userInput.value === user.username && passInput.value === user.password);
+    try {
+        const response = await fetch('http://localhost:3000/api/login', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                correo: userInput.value,
+                contrasena: passInput.value
+            })
+        });
 
-    if (foundUser) {
-        localStorage.setItem('nameUser', foundUser.username);
-        window.location.href = 'welcome.html';
-    } else {
+
+        if (passInput.value === '' || userInput.value === '') {
+            showMessageIncorrect();
+            return;
+        }
+
+        const data = await response.json();
+
+        if (data.success) {
+            Swal.fire({
+                icon: 'success',
+                title: '¡Bienvenido!',
+                text: '¡Ingreso exitoso: ' + data.user.nombre + '!',
+                showConfirmButton: false,
+                timer: 2000
+            }).then(() => {
+                localStorage.setItem('usuario', JSON.stringify(data.user.nombre));
+                window.location.href = '../private/welcome.html';
+            });
+        } else {
+            console.error(data.message);
+            showMessageError();
+        }
+    } catch (error) {
+        console.error('Error:', error);
         showMessageError();
     }
 }
@@ -66,5 +84,16 @@ function showMessageError() {
 
     setTimeout(() => {
         showError.classList.add('translate-y-20', 'opacity-0', 'invisible')
-    }, 3000);
+    }, 2000);
+}
+
+function showMessageIncorrect() {
+    userInput.value = '';
+    passInput.value = '';
+
+    incompleteInfo.classList.remove('translate-y-20', 'opacity-0', 'invisible');
+
+    setTimeout(() => {
+        incompleteInfo.classList.add('translate-y-20', 'opacity-0', 'invisible')
+    }, 2000);
 }

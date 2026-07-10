@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="./css/welcome.css">
     <script src="https://cdn.tailwindcss.com"></script>
 
@@ -94,10 +94,17 @@ flex justify-between items-center min-h-[80px]">
         </div>
         <!-- </div> -->
     </div>
+
+    <div class="bg-black/30 min-h-screen w-full 
+    fixed top-0 left-0 -translate-x-0 -translate-y-0 z-20 transition-all duration-500 opacity-0 invisible" id="overlay">
+        <div class="w-[5rem] h-[5rem] rounded-full flex justify-center items-center absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+            <div class="w-[3rem] h-[3rem] border-4 border-blue-500 animate-spin"></div>
+        </div>
+    </div>
 </body>
 
-<script src="./js/showMenu.js"></script>
+<script src="./js/index.js"></script>
+<script src="../js/session.js"></script>
 <script src="./js/recursos.js"></script>
-<script src="./js/session.js"></script>
 
 </html>

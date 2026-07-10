@@ -1,13 +1,15 @@
 const closeSession = document.querySelectorAll('.btnLogOut');
-const user = localStorage.getItem('nameUser');
+const user = localStorage.getItem('usuario');
+const overlay = document.getElementById('overlay');
 
 const nameUserElement = document.getElementById('nameUser');
 if (nameUserElement) {
-    nameUserElement.textContent = `Usuario: ${user}`;
+    let nameUser = user.replace(/['"]+/g, '');
+    nameUserElement.textContent = "Usuario: " + nameUser;    
 }
 
 if (!user || user === 'undefined' || user === null) {
-    window.location.href = 'index.html';
+    window.location.href = '../index.html';
 }
 
 closeSession.forEach(btn => {
@@ -16,10 +18,11 @@ closeSession.forEach(btn => {
 
 function finishSession(e) {
     if (e) e.preventDefault();
-    localStorage.removeItem('nameUser');
+    localStorage.removeItem('usuario');
+    overlay.classList.remove('opacity-0', 'invisible');
     const eventLogout = new CustomEvent('proyectoLogout');
     window.dispatchEvent(eventLogout);
     setTimeout(() => {
-        window.location.href = 'index.html';
-    }, 1000);
+        window.location.href = '../index.html';
+    }, 2000);
 };

@@ -1,7 +1,7 @@
 const closeSession = document.getElementById('closeSession');
 const user = localStorage.getItem('nameUser');
 
-if (!user || user === 'undefined') {
+if (localStorage.getItem('pestanasAbiertas') === 'no') {
     window.location.href = '../../index.html';
     console.log("DESDE aquí");
 }   

@@ -2,6 +2,8 @@ const pestanasAbiertas = [];
 const tituloElemento = document.getElementById('titulo');
 const BASE_URL = "buscador.json";
 
+
+
 //Función para traer los datos del .JSON
 let dataComplete = [];
 
@@ -12,7 +14,7 @@ async function getInformation() {
         if (tituloElemento) tituloElemento.style.display = "none";
         renderResults(dataComplete);
     } catch (error) {
-        console.log("Error al cargar los datos")
+        console.log("Error al cargar los datos");
     }
 }
 
@@ -49,8 +51,12 @@ function renderResults(data) {
                 if (nuevaPestana) {
                     pestanasAbiertas.push(nuevaPestana);
                     console.log("pestañaAbierta: ", pestanasAbiertas);
+                    console.log(typeof (pestanasAbiertas));
+                    localStorage.setItem('pestanasAbiertas', 'si');
                 }
             });
+
+
 
             downloadResource.classList.add('downloadResource');
             downloadResource.setAttribute("href", resp.download);
@@ -78,35 +84,40 @@ function renderResults(data) {
     }
 }
 
-//BUSCAR Info:
-let inputSearch = document.getElementById('inputSearch');
+// //BUSCAR Info:
+// let inputSearch = document.getElementById('inputSearch');
 
-inputSearch.addEventListener('input', (e) => {
-    const wordSearch = inputSearch.value.toLowerCase();
-    const resultResearch = dataComplete.filter(res => res.titulo?.toLowerCase().includes(wordSearch));
-    renderResults(resultResearch);
-
-})
+// inputSearch.addEventListener('input', (e) => {
+//     const wordSearch = inputSearch.value.toLowerCase();
+//     const resultResearch = dataComplete.filter(res => res.titulo?.toLowerCase().includes(wordSearch));
+//     renderResults(resultResearch);
+// });
 
 getInformation();
 
 document.addEventListener('click', (e) => {
-    if (e.target.classList.contains('btnLogOut') || e.target.closest('.btnLogOut')) {        
+    if (e.target.classList.contains('btnLogOut') || e.target.closest('.btnLogOut')) {
         cerrarTodasLasPestanas();
     }
-}, true); 
+}, true);
 
 window.addEventListener('storage', (event) => {
-    if (event.key === 'nameUser' && (!event.newValue || event.newValue === 'undefined')) {
+    if (event.key === 'nameUser' && (!event.newValue || event.newValue === 'undefined' || event.newValue === 'null')) {
         cerrarTodasLasPestanas();
-        window.location.href = 'index.html';
+        window.location.href = '../index.html';
     }
 });
 
-function cerrarTodasLasPestanas() {    
+function cerrarTodasLasPestanas() {
+    localStorage.setItem('pestanasAbiertas', 'no');
     pestanasAbiertas.forEach(pestana => {
-        if (pestana && !pestana.closed) {
+        if (pestana && !pestana.closed && localStorage.getItem('pestanasAbiertas') === 'no') {
             pestana.close();
+
         }
     });
 }
+
+
+
+
